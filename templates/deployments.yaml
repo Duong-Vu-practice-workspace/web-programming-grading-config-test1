@@ -28,17 +28,17 @@ spec:
             - name: DB_URL
               valueFrom:
                 secretKeyRef:
-                  name: {{ .secretName }}
+                  name: db-secret
                   key: DB_URL
             - name: DB_USERNAME
               valueFrom:
                 secretKeyRef:
-                  name: {{ .secretName }}
+                  name: db-secret
                   key: DB_USERNAME
             - name: DB_PASSWORD
               valueFrom:
                 secretKeyRef:
-                  name: {{ .secretName }}
+                  name: db-secret
                   key: DB_PASSWORD
           resources:
             {{- toYaml .resources | nindent 12 }}

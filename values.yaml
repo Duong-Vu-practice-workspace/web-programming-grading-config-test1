@@ -12,7 +12,6 @@ spring:
 
 services:
  - name: api
- secretName: api-secret
  replicaCount: 1
  image:
  repository: vucongtuanduong/web-grading-api
@@ -28,7 +27,6 @@ services:
         memory: 256Mi
 
  - name: executor
- secretName: executor-secret
  replicaCount: 1
  image:
  repository: vucongtuanduong/web-grading-executor

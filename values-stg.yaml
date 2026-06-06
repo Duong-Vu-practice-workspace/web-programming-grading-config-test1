@@ -4,7 +4,7 @@ global:
 
 image:
   registry: docker.io
-  tag: "v1.11"
+  tag: "v1.12"
   pullPolicy: Always
 
 spring:

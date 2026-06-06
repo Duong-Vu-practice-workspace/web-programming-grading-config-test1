@@ -11,10 +11,10 @@ spring:
   profilesActive: stg
 
 services:
- - name: api
- replicaCount: 1
- image:
- repository: vucongtuanduong/web-grading-api
+  - name: api
+    replicaCount: 1
+    image:
+      repository: vucongtuanduong/web-grading-api
     service:
       type: ClusterIP
       port: 8080
@@ -26,10 +26,10 @@ services:
         cpu: 200m
         memory: 256Mi
 
- - name: executor
- replicaCount: 1
- image:
- repository: vucongtuanduong/web-grading-executor
+  - name: executor
+    replicaCount: 1
+    image:
+      repository: vucongtuanduong/web-grading-executor
     service:
       type: ClusterIP
       port: 8081
